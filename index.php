@@ -86,7 +86,26 @@ try {
             </tbody>
            
             </table></div>
-        <div class="tab-pane" id="insert"><p>sample tab2</p></div>
+        <div class="tab-pane" id="insert">
+            <form class="mt-3" action="./insert.php" method="POST">
+            <div class="form-group row">
+                <label for="id" class="col-sm-2 col-   form-label">ID</label>
+                <div class="col-sm-10">
+        <input type="text" class="form-control"  id="id"name="id">
+        </div></div>
+                <div class="form-group row">
+                <label for="name" class="col-sm-2 col-   form-label">Your Name</label>
+                <div class="col-sm-10">
+        <input type="text" class="form-control"  id="name"name="name">
+        </div></div>
+                    <div class="form-group row">
+                <label for="age" class="col-sm-2 col-   form-label">Age</label>
+                <div class="col-sm-10">
+        <input type="text" class="form-control"  id="age"name="age">
+        </div>
+                </div>
+            </form>
+            </div>
         <div class="tab-pane" id="update"><p>sample tab3</p></div>
         <div class="tab-pane" id="delete"><p>sample tab4</p></div>
     </div>
