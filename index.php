@@ -70,6 +70,7 @@ try {
                     <th>Id</th>
                     <th>Name</th>
                     <th>Age</th>
+                    
                 
                 </tr>
             </thead>
@@ -124,7 +125,39 @@ try {
         </div>
                 </div>
             </form></div>
-        <div class="tab-pane" id="delete"><p>sample tab4</p></div>
+        <div class="tab-pane" id="delete"><  
+            <table class="table table-striped mt-2">
+            <caption>Show User Table</caption>
+            <thead class="thead-dark" >
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>-</th>
+                    
+                
+                </tr>
+            </thead>
+            <tbody class="">
+                <?php foreach($result as &value) { ?>
+                <tr>
+                    <th><php echo '$value[id]'; ?></php></th>
+                    <td><php echo '$value[name]'; ?></php></td>
+                    <td><php echo '$value[age]'; ?></php></td>
+                    <td>
+                        <form action="./delete.php" method="GET">
+                            <input class="d-none" type="text" name="id" value="<?php echo "$value[id]"?>">
+                           <button class="btn btn-danger" type="submit">delete</button>
+                        
+                        </form>
+                    
+                    </td>
+                    
+                </tr>
+                <?php } ?>
+            
+            </tbody>
+           </p></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
